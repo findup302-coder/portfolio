@@ -42,15 +42,20 @@
       /* HERO */
       .hero {
         min-height: 100vh;
-        background: linear-gradient(
-          135deg,
-          var(--flutter-dark),
-          var(--flutter-light)
-        );
         color: white;
         display: flex;
         align-items: center;
         padding: 0 8%;
+
+        background: linear-gradient(
+          135deg,
+          rgba(2, 86, 155, 0.9),
+          rgba(66, 165, 245, 0.85)
+        ); /* YOUR IMAGE */
+
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
       }
 
       .hero-content {
@@ -481,6 +486,26 @@
         left: 70%;
         animation-duration: 19s;
       }
+      .hero-buttons a {
+        backdrop-filter: blur(10px);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+      }
+
+      .btn-primary {
+        background: linear-gradient(135deg, #ffffff, #e0f2ff);
+      }
+
+      .btn-outline {
+        border: 1.5px solid rgba(255, 255, 255, 0.6);
+      }
+      .skill-card {
+        transition: transform 0.35s ease, box-shadow 0.35s ease;
+      }
+
+      .skill-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 40px 80px rgba(0, 0, 0, 0.12);
+      }
 
       /* Animation keyframes */
       @keyframes float {
@@ -515,6 +540,27 @@
           grid-template-columns: 1fr;
         }
       }
+      /* =========================================================
+   EXPERIENCE – MOBILE IMAGE ON TOP (KEEP ORIGINAL STYLE)
+   ========================================================= */
+      @media (max-width: 640px) {
+        .experience-card {
+          display: flex !important; /* override grid only on mobile */
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 16px;
+        }
+
+        .experience-icon {
+          width: auto;
+          height: auto;
+        }
+
+        .experience-icon img {
+          width: 64px;
+          height: 64px;
+        }
+      }
     </style>
   </head>
 
@@ -540,12 +586,16 @@
 
           <!-- Text -->
           <div class="hero-text">
-            <h1>Hi, I’m <span>Yorn Vichet</span><br />Mobile Developer</h1>
+            <h1>
+              Mobile Developer<br />
+              <span>Yorn Vichet</span>
+            </h1>
             <p>
-              I build modern, scalable, and beautiful mobile applications using
-              Flutter. Passionate about clean code, great UI, and real-world
-              solutions.
+              I design and build high-performance mobile applications with
+              Flutter — focused on clean architecture, elegant UI, and scalable
+              real-world solutions.
             </p>
+
             <div class="hero-buttons">
               <a href="#projects" class="btn-primary">View Projects</a>
               <a href="#experience" class="btn-outline">View Experience</a>
@@ -561,31 +611,29 @@
     <section class="section">
       <h2 class="section-title">About Me</h2>
       <p class="section-subtitle">
-        Experienced Mobile Developer with a passion for building scalable,
-        intuitive, and high-performance applications. Skilled in Flutter,
-        full-stack development, and deploying production-ready solutions.
+        Mobile-focused full-stack developer crafting scalable, production-ready
+        applications used by real users.
       </p>
 
       <div class="about-grid">
         <div class="about-card">
           <p>
-            I specialize in <strong>Flutter</strong> development for Android,
-            iOS, Web, and Windows platforms, delivering clean, maintainable, and
-            performant code. My focus is on creating seamless user experiences
-            and visually appealing interfaces that meet business goals.
+            I specialize in <strong>Flutter</strong> to build cross-platform
+            applications for Android, iOS, Web, and Desktop — focusing on
+            performance, maintainability, and user experience.
           </p>
+
           <p>
-            With experience in <strong>Firebase</strong>,
-            <strong>Database</strong> management,
-            <strong>Laravel</strong> backend development, and server deployment
-            on <strong>VPS</strong>, I am comfortable handling full-stack
-            responsibilities. I enjoy collaborating with teams, mentoring junior
-            developers, and bringing innovative ideas to life.
+            My experience spans <strong>Firebase</strong>,
+            <strong>REST APIs</strong>, <strong>Laravel</strong>,
+            <strong>MySQL</strong>, and <strong>VPS deployment</strong>,
+            allowing me to deliver complete end-to-end solutions.
           </p>
+
           <p>
-            Currently, I contribute to professional-grade applications like
-            <strong>FindUP & Cambodia PRO</strong>, integrating robust backend
-            systems with elegant, user-friendly mobile solutions.
+            I’ve contributed to production applications such as
+            <strong>FindUP</strong> and <strong>Cambodia Pro</strong>, used in
+            real business environments.
           </p>
         </div>
       </div>
@@ -652,7 +700,6 @@
       </p>
 
       <div class="experience-timeline">
-        
         <!-- 8POS -->
         <div class="experience-card">
           <div class="experience-icon pos">
@@ -665,9 +712,9 @@
             <span class="duration">1.5 Years</span>
 
             <p>
-              Worked as a <strong>Mobile Developer (Android & iOS)</strong> and
-              <strong>Full Stack Developer</strong> to build and maintain a
-              Point of Sale (POS) system.
+              Contributed as a <strong>Mobile & Full Stack Engineer</strong>,
+              developing and maintaining POS systems used in real business
+              operations.
             </p>
 
             <ul>
@@ -791,9 +838,7 @@
         </p>
         <p>
           Telegram:
-          <a href="https://t.me/yorn_vichett" target="_blank"
-            >@yorn_vichett</a
-          >
+          <a href="https://t.me/yorn_vichett" target="_blank">@yorn_vichett</a>
         </p>
       </div>
     </section>
